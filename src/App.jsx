@@ -13,7 +13,8 @@ import PlacesPage from './pages/PlacesPage';
 import PlacePage from './pages/PlacePage';
 import BookingPage from './pages/BookingPage';
 import BookingsPage from './pages/BookingsPage';
-axios.defaults.baseURL='http://127.0.0.1:4000';
+axios.defaults.baseURL= 'https://booker-qjtn.onrender.com';
+// 'http://127.0.0.1:4000';
 axios.defaults.withCredentials=true;
 
 function App() {  
