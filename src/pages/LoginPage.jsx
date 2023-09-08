@@ -15,7 +15,7 @@ export default function LoginPage(){
   async function loginUser(ev){
     ev.preventDefault();
     try{
-      const response = await axios.post('http://localhost:4000/login',
+      const response = await axios.post('https://booker-qjtn.onrender.com/login',
       {email,password},{withCredentials:true},{headers: {'Content-Type': 'application/json'}});
         alert('Login Successful!');
         setUser(response.data);

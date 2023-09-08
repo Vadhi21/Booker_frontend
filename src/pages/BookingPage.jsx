@@ -9,7 +9,7 @@ export default function BookingPage(){
     const [booking,setBooking]=useState(null);
     useEffect(()=>{
         if(id){ //because bookings require jwt token 
-            axios.get('http://localhost:4000/bookings').then(response=>{
+            axios.get('https://booker-qjtn.onrender.com/bookings').then(response=>{
                 const foundBooking=response.data.filter(({_id})=> _id===id); //checking if the id from booking and url are same
                 if(foundBooking){
                     setBooking(foundBooking);

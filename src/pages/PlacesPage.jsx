@@ -10,7 +10,7 @@ import PlaceImg from "../PlaceImg";
 export default function PlacesPage(){
     const [places,setPlaces]=useState([]);
     useEffect(()=>{
-        axios.get('http://localhost:4000/user-places').then(({data})=>{
+        axios.get('https://booker-qjtn.onrender.com/user-places').then(({data})=>{
             setPlaces(data);
         });
     },[]);

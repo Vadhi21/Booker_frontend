@@ -6,7 +6,7 @@ export function UserContexttProvider({children}){
     const [ready,setReady]=useState(false);
     useEffect(()=>{
         if(!user){
-            axios.get('http://localhost:4000/profile').then(({data})=>{
+            axios.get('https://booker-qjtn.onrender.com/profile').then(({data})=>{
                 setUser(data);
                 setReady(true);
             });

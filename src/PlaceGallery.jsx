@@ -17,7 +17,7 @@ export default function PlaceGallery({place}){ //for displaying the photos of th
                 </div>
                 {place?.photos?.length>0 && place.photos.map(photo=>(
                     <div>
-                        <img src={"http://localhost:4000/uploads/"+photo} alt="/"></img>
+                        <img src={"https://booker-qjtn.onrender.com/uploads/"+photo} alt="/"></img>
                     </div>
                 ))};
                 </div>
@@ -31,7 +31,7 @@ export default function PlaceGallery({place}){ //for displaying the photos of th
             <div>
                 {place.photos?.[0] && (
                     <div>
-                    <img onClick={()=>setShowAllPhotos(true)} className="object-cover cursor-pointer aspect-square" src={"http://localhost:4000/uploads/"+place.photos[0]} alt="/" 
+                    <img onClick={()=>setShowAllPhotos(true)} className="object-cover cursor-pointer aspect-square" src={"https://booker-qjtn.onrender.com/uploads/"+place.photos[0]} alt="/" 
                     // style={{
                     //     height:"400px",
                     //     width:"400px"
@@ -44,11 +44,11 @@ export default function PlaceGallery({place}){ //for displaying the photos of th
             </div>
             <div className="grid">
                 {place.photos?.[1] && (
-                        <img onClick={()=>setShowAllPhotos(true)} className="object-cover cursor-pointer aspect-square" src={"http://localhost:4000/uploads/"+place.photos[1]} alt="/" />
+                        <img onClick={()=>setShowAllPhotos(true)} className="object-cover cursor-pointer aspect-square" src={"https://booker-qjtn.onrender.com/uploads/"+place.photos[1]} alt="/" />
                 )}
                 <div className="overflow-hidden">
                     {place.photos?.[2] && (
-                    <img onClick={()=>setShowAllPhotos(true)}  className="object-cover cursor-pointer aspect-square relative top-2" src={"http://localhost:4000/uploads/"+place.photos[2]} alt="/" />
+                    <img onClick={()=>setShowAllPhotos(true)}  className="object-cover cursor-pointer aspect-square relative top-2" src={"https://booker-qjtn.onrender.com/uploads/"+place.photos[2]} alt="/" />
                     )}
                 </div>
                 

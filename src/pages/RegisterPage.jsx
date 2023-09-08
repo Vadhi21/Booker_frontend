@@ -8,7 +8,7 @@ export default function RegisterPage(){
     async function registerUser(ev){
         ev.preventDefault();
         try{
-            await axios.post('http://localhost:4000/register',{
+            await axios.post('https://booker-qjtn.onrender.com/register',{
               name,email,password
           }, {
               headers: {

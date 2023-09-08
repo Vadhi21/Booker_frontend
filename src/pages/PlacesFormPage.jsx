@@ -24,7 +24,7 @@ export default function PlacesFormPage(){
 
     useEffect(()=>{
         if(!id){return;}
-        axios.get('http://localhost:4000/places/'+id).then(response=>{ //for editing the place
+        axios.get('https://booker-qjtn.onrender.com/places/'+id).then(response=>{ //for editing the place
             const {data}=response;
             setTitle(data.title);
             setAddress(data.address);
@@ -66,12 +66,12 @@ export default function PlacesFormPage(){
         const placeData={title,address,addedPhotos,description,perks,extraInfo,checkIn,checkOut,maxGuests};
         
         if(id){ //its an update we would have come by the place id and it wont exist
-            await axios.put('http://localhost:4000/places',{
+            await axios.put('https://booker-qjtn.onrender.com/places',{
                 id,title,address,addedPhotos,description,perks,extraInfo,checkIn,checkOut,maxGuests,price});
             setRedirect(true);
         }
         else{ //adding a new place
-            await axios.post('http://localhost:4000/places',{
+            await axios.post('https://booker-qjtn.onrender.com/places',{
                 title,address,addedPhotos,description,perks,extraInfo,checkIn,checkOut,maxGuests,price
             });
             setRedirect(true);
